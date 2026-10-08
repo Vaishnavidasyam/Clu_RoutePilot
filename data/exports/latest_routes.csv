@@ -1,0 +1,7 @@
+id,plan_version_id,executive_id,executive_name,total_km,total_travel_minutes,total_waiting_minutes,total_service_minutes,total_duration_minutes,visit_count,return_time,is_feasible
+247,42,E01,Vikram Singh,11.36,27.27,69.17,110.0,206.44,6,11:56,1
+248,42,E02,Rajesh Kumar,25.9,62.17,147.45,180.0,389.62,9,15:30,1
+249,42,E03,Ananya Sen,17.59,42.22,249.13,195.0,486.35,10,16:36,1
+250,42,E04,Karthik Raja,73.57,176.56,37.1,240.0,453.66,12,16:34,1
+251,42,E05,Deepak Verma,30.31,72.76,84.14,260.0,416.9,14,15:57,1
+252,42,E06,Suresh Nair,23.76,57.03,71.68,195.0,323.71,9,13:54,1

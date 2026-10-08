@@ -1,0 +1,6 @@
+key,value,description,updated_at
+allow_waiting,true,Permit early arrival waiting at customer locations within working hours,2026-10-01 16:19:10.441615
+avg_speed_kmh,25.0,Average city travel speed in km/h for urban collection routes,2026-10-01 16:19:10.441609
+default_lambda,2.0,Weight coefficient for total travel distance in objective function,2026-10-01 16:19:10.441603
+ptp_mandatory,true,Always prioritize PTP (promise to pay) customers ahead of optional visits,2026-10-01 16:19:10.441613
+road_factor,1.3,Correction multiplier applied to Haversine distance for road approximation,2026-10-01 16:19:10.441611

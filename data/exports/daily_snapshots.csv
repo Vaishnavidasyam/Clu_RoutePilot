@@ -1,0 +1,8 @@
+id,plan_date,created_by,executive_count,customer_count,ptp_count,status,data_source,created_at
+7,2026-10-08,manager@routepilot.io,6,60,21,validated,csv,2026-10-08 14:22:16.178870
+6,2026-10-08,Priya Sharma (Ops Lead),6,60,21,ready,csv,2026-10-07 18:43:19.552801
+5,2026-10-07,Priya Sharma (Ops Lead),6,60,21,ready,csv,2026-10-06 18:40:49.128206
+4,2026-10-06,manager@routepilot.io,6,60,21,validated,csv,2026-10-06 12:06:22.736287
+3,2026-10-06,Priya Sharma (Ops Lead),6,60,21,ready,csv,2026-10-06 09:28:36.834060
+2,2026-10-05,Priya Sharma (Ops Lead),6,60,21,ready,csv,2026-10-05 14:31:51.374344
+1,2026-10-01,Priya Sharma (Ops Lead),6,60,21,ready,csv,2026-10-01 16:19:10.436664

@@ -1,0 +1,11 @@
+id,name,area,lat,lon,dpd,overdue_amount,priority_score,ptp_today,window_start,window_end,service_min
+C001,Northgate Traders,Gachibowli,17.4401,78.3489,45,34500.0,88.0,1,09:00,12:00,15
+C002,Harbor Point Retail,Madhapur,17.4483,78.3915,62,21800.0,41.0,1,09:30,13:00,15
+C003,Civic Plaza Pharmacy,Hitech City,17.4435,78.3772,30,18200.0,75.0,1,10:00,13:30,20
+C004,Eastfield Auto Components,Banjara Hills,17.4156,78.4352,85,62000.0,92.0,1,11:00,15:00,20
+C005,Apex Electronics Depot,Jubilee Hills,17.4325,78.4070,15,12500.0,45.0,0,09:30,14:00,15
+C006,Metro Garments Ltd,Kukatpally,17.4948,78.3996,90,78000.0,95.0,1,10:30,14:30,25
+C007,Greenfield Agro Supply,Secunderabad,17.4399,78.4983,25,14000.0,50.0,0,13:00,17:00,15
+C008,Sunrise Medical Stores,Begumpet,17.4447,78.4664,40,29000.0,68.0,1,13:30,17:00,15
+C009,Zenith Hardware & Tools,Ameerpet,17.4375,78.4482,10,8500.0,35.0,0,14:00,17:30,15
+C010,Blueline Logistics Hub,Mehdipatnam,17.3916,78.4400,120,95000.0,98.0,1,10:00,15:00,30

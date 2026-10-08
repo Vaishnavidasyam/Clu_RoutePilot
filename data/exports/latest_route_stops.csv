@@ -1,0 +1,61 @@
+id,executive_id,executive_name,seq,customer_id,customer_name,area,lat,lon,arrival_time,waiting_min,service_start,service_end,departure_time,km_from_prev,cumulative_km,priority_score,ptp_today,overdue_amount
+2402,E01,Vikram Singh,1,C001,Northgate Traders,Gachibowli,12.978278,77.5946,08:32,27.67,09:00,09:15,09:15,0.97,0.97,88.0,1,34500.0
+2403,E01,Vikram Singh,2,C029,Account C029 - Begumpet,Begumpet,12.988405,77.594954,09:18,41.5,10:00,10:25,10:25,1.46,2.43,78.1,0,105329.8
+2404,E01,Vikram Singh,3,C040,Account C040 - Begumpet,Begumpet,12.975086,77.615582,10:33,0.0,10:33,10:58,10:58,3.49,5.92,16.6,0,11541.15
+2405,E01,Vikram Singh,4,C054,Account C054 - Begumpet,Begumpet,12.966673,77.614498,11:01,0.0,11:01,11:16,11:16,1.23,7.15,42.1,0,45210.72
+2406,E01,Vikram Singh,5,C002,Harbor Point Retail,Madhapur,12.96175,77.5971,11:22,0.0,11:22,11:37,11:37,2.55,9.7,41.0,1,21800.0
+2407,E01,Vikram Singh,6,C039,Account C039 - Begumpet,Begumpet,12.964644,77.598901,11:39,0.0,11:39,11:54,11:54,0.49,10.19,34.6,0,71605.73
+2408,E02,Rajesh Kumar,1,C003,Civic Plaza Pharmacy,Hitech City,12.934,77.621,09:01,58.75,10:00,10:20,10:20,0.52,0.52,75.0,1,18200.0
+2409,E02,Rajesh Kumar,2,C026,Account C026 - Madhapur,Madhapur,12.945116,77.614953,10:24,35.63,11:00,11:25,11:25,1.82,2.34,100.0,1,63381.23
+2410,E02,Rajesh Kumar,3,C042,Account C042 - Madhapur,Madhapur,12.931577,77.62351,11:31,0.0,11:31,11:51,11:51,2.3,4.64,82.6,1,41382.53
+2411,E02,Rajesh Kumar,4,C035,Account C035 - Madhapur,Madhapur,12.920818,77.627846,11:55,0.0,11:55,12:15,12:15,1.67,6.31,100.0,1,104092.34
+2412,E02,Rajesh Kumar,5,C014,Account C014 - Kukatpally,Kukatpally,12.905436,77.636059,12:21,0.0,12:21,12:41,12:41,2.51,8.82,100.0,1,43708.37
+2413,E02,Rajesh Kumar,6,C008,Sunrise Medical Stores,Begumpet,12.9166,77.6101,12:50,39.85,13:30,13:45,13:45,4.0,12.82,68.0,1,29000.0
+2414,E02,Rajesh Kumar,7,C011,Account C011 - Madhapur,Madhapur,12.91975,77.614251,13:47,13.22,14:00,14:25,14:25,0.74,13.56,50.4,1,21046.86
+2415,E02,Rajesh Kumar,8,C020,Account C020 - Madhapur,Madhapur,12.925329,77.634287,14:32,0.0,14:32,14:52,14:52,2.94,16.5,64.5,0,41187.96
+2416,E02,Rajesh Kumar,9,C009,Zenith Hardware & Tools,Ameerpet,12.9609,77.6387,15:04,0.0,15:04,15:19,15:19,5.18,21.68,35.0,0,8500.0
+2417,E03,Ananya Sen,1,C005,Apex Electronics Depot,Jubilee Hills,13.0031,77.5702,08:33,56.71,09:30,09:45,09:45,1.37,1.37,45.0,0,12500.0
+2418,E03,Ananya Sen,2,C031,Account C031 - Banjara Hills,Banjara Hills,12.994841,77.565343,09:48,0.0,09:48,10:13,10:13,1.38,2.75,63.5,0,68700.98
+2419,E03,Ananya Sen,3,C006,Metro Garments Ltd,Kukatpally,12.9915,77.5525,10:18,12.2,10:30,10:55,10:55,1.87,4.62,95.0,1,78000.0
+2420,E03,Ananya Sen,4,C055,Account C055 - Banjara Hills,Banjara Hills,13.000054,77.563558,11:00,180.22,14:00,14:25,14:25,1.99,6.61,82.5,1,116192.25
+2421,E03,Ananya Sen,5,C019,Account C019 - Banjara Hills,Banjara Hills,13.008638,77.580486,14:31,0.0,14:31,14:51,14:51,2.69,9.3,76.6,0,11432.86
+2422,E03,Ananya Sen,6,C033,Account C033 - Banjara Hills,Banjara Hills,13.004277,77.576901,14:53,0.0,14:53,15:08,15:08,0.81,10.11,94.5,1,71264.34
+2423,E03,Ananya Sen,7,C028,Account C028 - Banjara Hills,Banjara Hills,13.01444,77.583608,15:13,0.0,15:13,15:28,15:28,1.75,11.86,41.7,0,89169.37
+2424,E03,Ananya Sen,8,C025,Account C025 - Secunderabad,Secunderabad,13.025645,77.582097,15:32,0.0,15:32,15:57,15:57,1.63,13.49,100.0,1,105723.09
+2425,E03,Ananya Sen,9,C030,Account C030 - Banjara Hills,Banjara Hills,13.009488,77.56717,16:04,0.0,16:04,16:19,16:19,3.14,16.63,79.9,0,79735.98
+2426,E03,Ananya Sen,10,C051,Account C051 - Banjara Hills,Banjara Hills,13.008108,77.56581,16:20,0.0,16:20,16:35,16:35,0.28,16.91,78.7,0,106675.49
+2427,E04,Karthik Raja,1,C015,Account C015 - Jubilee Hills,Jubilee Hills,12.979014,77.756892,09:32,0.0,09:32,09:52,09:52,13.13,13.13,43.7,0,19355.01
+2428,E04,Karthik Raja,2,C058,Account C058 - Jubilee Hills,Jubilee Hills,12.956132,77.748082,10:00,0.02,10:00,10:20,10:20,3.53,16.66,80.6,0,111441.14
+2429,E04,Karthik Raja,3,C032,Account C032 - Gachibowli,Gachibowli,12.970268,77.652963,10:53,7.48,11:00,11:20,11:20,13.55,30.21,89.2,0,42999.28
+2430,E04,Karthik Raja,4,C027,Account C027 - Gachibowli,Gachibowli,12.981368,77.640458,11:26,0.0,11:26,11:41,11:41,2.38,32.59,50.7,0,111846.34
+2431,E04,Karthik Raja,5,C004,Eastfield Auto Components,Banjara Hills,12.9784,77.6408,11:42,0.0,11:42,12:02,12:02,0.43,33.02,92.0,1,62000.0
+2432,E04,Karthik Raja,6,C048,Account C048 - Gachibowli,Gachibowli,12.966169,77.638507,12:06,0.0,12:06,12:26,12:26,1.8,34.82,52.0,1,10069.98
+2433,E04,Karthik Raja,7,C038,Account C038 - Gachibowli,Gachibowli,12.968339,77.625865,12:30,29.6,13:00,13:20,13:20,1.81,36.63,38.2,0,35498.35
+2434,E04,Karthik Raja,8,C024,Account C024 - Gachibowli,Gachibowli,12.983809,77.629237,13:26,0.0,13:26,13:46,13:46,2.29,38.92,72.5,0,91350.95
+2435,E04,Karthik Raja,9,C037,Account C037 - Gachibowli,Gachibowli,12.99247,77.653591,13:54,0.0,13:54,14:14,14:14,3.65,42.57,84.9,0,32183.64
+2436,E04,Karthik Raja,10,C046,Account C046 - Jubilee Hills,Jubilee Hills,12.982753,77.738108,14:43,0.0,14:43,15:03,15:03,11.99,54.56,26.2,0,35413.58
+2437,E04,Karthik Raja,11,C047,Account C047 - Jubilee Hills,Jubilee Hills,12.972945,77.756528,15:10,0.0,15:10,15:30,15:30,2.96,57.52,45.6,0,84062.17
+2438,E04,Karthik Raja,12,C045,Account C045 - Jubilee Hills,Jubilee Hills,12.959532,77.760012,15:35,0.0,15:35,16:00,16:00,2.0,59.52,63.9,0,39789.47
+2439,E05,Deepak Verma,1,C044,Account C044 - Madhapur,Madhapur,12.921198,77.612395,09:10,0.0,09:10,09:30,09:30,4.02,4.02,56.1,1,20232.51
+2440,E05,Deepak Verma,2,C034,Account C034 - Madhapur,Madhapur,12.921908,77.618932,09:32,0.0,09:32,09:57,09:57,0.93,4.95,44.9,0,52276.76
+2441,E05,Deepak Verma,3,C050,Account C050 - Kukatpally,Kukatpally,12.914575,77.634043,10:03,0.0,10:03,10:18,10:18,2.38,7.33,15.9,0,9810.32
+2442,E05,Deepak Verma,4,C022,Account C022 - Kukatpally,Kukatpally,12.90368,77.659526,10:27,0.0,10:27,10:52,10:52,3.92,11.25,60.7,0,61754.32
+2443,E05,Deepak Verma,5,C016,Account C016 - Kukatpally,Kukatpally,12.914421,77.650737,10:57,0.0,10:57,11:12,11:12,1.99,13.24,38.4,0,81045.28
+2444,E05,Deepak Verma,6,C056,Account C056 - Kukatpally,Kukatpally,12.925277,77.63306,11:19,0.0,11:19,11:34,11:34,2.94,16.18,28.2,0,25535.3
+2445,E05,Deepak Verma,7,C059,Account C059 - Madhapur,Madhapur,12.947466,77.633623,11:42,0.0,11:42,12:02,12:02,3.21,19.39,52.4,0,41100.3
+2446,E05,Deepak Verma,8,C018,Account C018 - Madhapur,Madhapur,12.937274,77.611134,12:10,0.0,12:10,12:35,12:35,3.49,22.88,61.3,0,33153.26
+2447,E05,Deepak Verma,9,C041,Account C041 - Madhapur,Madhapur,12.939256,77.613056,12:36,84.14,14:00,14:15,14:15,0.39,23.27,51.3,0,113283.55
+2448,E05,Deepak Verma,10,C049,Account C049 - Hitech City,Hitech City,12.932237,77.59535,14:21,0.0,14:21,14:36,14:36,2.69,25.96,81.8,1,69504.29
+2449,E05,Deepak Verma,11,C023,Account C023 - Hitech City,Hitech City,12.933762,77.591465,14:38,0.0,14:38,14:58,14:58,0.59,26.55,25.7,0,49248.24
+2450,E05,Deepak Verma,12,C007,Greenfield Agro Supply,Secunderabad,12.925,77.5938,15:01,0.0,15:01,15:16,15:16,1.31,27.86,50.0,0,14000.0
+2451,E05,Deepak Verma,13,C036,Account C036 - Hitech City,Hitech City,12.922656,77.587156,15:18,0.0,15:18,15:33,15:33,1.0,28.86,84.2,1,105565.88
+2452,E05,Deepak Verma,14,C021,Account C021 - Hitech City,Hitech City,12.917946,77.586199,15:35,0.0,15:35,15:55,15:55,0.69,29.55,62.8,0,66982.39
+2453,E06,Suresh Nair,1,C043,Account C043 - Secunderabad,Secunderabad,13.024826,77.601365,08:45,15.38,09:00,09:20,09:20,6.09,6.09,40.5,0,41360.38
+2454,E06,Suresh Nair,2,C013,Account C013 - Secunderabad,Secunderabad,13.027513,77.599678,09:21,38.9,10:00,10:20,10:20,0.46,6.55,100.0,0,104969.54
+2455,E06,Suresh Nair,3,C052,Account C052 - Banjara Hills,Banjara Hills,13.014038,77.584486,10:27,0.0,10:27,10:47,10:47,2.89,9.44,82.1,0,25361.02
+2456,E06,Suresh Nair,4,C012,Account C012 - Secunderabad,Secunderabad,13.021853,77.584811,10:50,0.0,10:50,11:15,11:15,1.13,10.57,67.2,1,63115.86
+2457,E06,Suresh Nair,5,C010,Blueline Logistics Hub,Mehdipatnam,13.0359,77.597,11:21,0.0,11:21,11:51,11:51,2.66,13.23,98.0,1,95000.0
+2458,E06,Suresh Nair,6,C053,Account C053 - Secunderabad,Secunderabad,13.044967,77.607922,11:56,0.0,11:56,12:11,12:11,2.02,15.25,100.0,1,33539.23
+2459,E06,Suresh Nair,7,C017,Account C017 - Secunderabad,Secunderabad,13.029239,77.601071,12:17,0.0,12:17,12:42,12:42,2.47,17.72,27.5,0,23705.22
+2460,E06,Suresh Nair,8,C060,Account C060 - Secunderabad,Secunderabad,13.030685,77.602916,12:43,17.4,13:00,13:25,13:25,0.33,18.05,43.9,0,19638.1
+2461,E06,Suresh Nair,9,C057,Account C057 - Secunderabad,Secunderabad,13.031271,77.605593,13:26,0.0,13:26,13:41,13:41,0.39,18.44,53.9,0,74714.02

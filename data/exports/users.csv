@@ -1,0 +1,4 @@
+id,email,full_name,role,executive_id,is_active,created_at
+1,admin@routepilot.io,Dev Admin,ADMIN,,1,2026-10-01 16:19:10.445108
+2,manager@routepilot.io,Priya Sharma (Ops Lead),OPERATIONS_MANAGER,,1,2026-10-01 16:19:10.445116
+3,executive@routepilot.io,Vikram Singh (E01),EXECUTIVE,E01,1,2026-10-01 16:19:10.445118

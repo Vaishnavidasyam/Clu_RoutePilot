@@ -1,0 +1,7 @@
+id,name,home_lat,home_lon,shift_start,shift_end,max_visits,max_km,status
+E01,Vikram Singh,17.4239,78.4738,08:30,17:30,15,65.0,active
+E02,Rajesh Kumar,17.4401,78.3489,09:00,18:00,15,70.0,active
+E03,Ananya Sen,17.4399,78.4983,08:30,17:30,14,60.0,active
+E04,Karthik Raja,17.4156,78.4352,09:00,18:00,16,75.0,active
+E05,Deepak Verma,17.4948,78.3996,09:00,18:00,14,60.0,active
+E06,Suresh Nair,17.3916,78.44,08:30,17:30,15,70.0,active

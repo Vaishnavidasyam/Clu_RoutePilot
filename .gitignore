@@ -1,0 +1,55 @@
+# Node dependencies & builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Pytest
+.pytest_cache/
+backend/.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Temporary & Lock Files
+~$*.xlsx
+~$*.csv
+*.tmp
+*.log
+
+# Intermediate generated HTML reports (keep markdown and PDF)
+RoutePilot_Academic_Project_Report.html
+RoutePilot_Technical_Audit_Report.html
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
