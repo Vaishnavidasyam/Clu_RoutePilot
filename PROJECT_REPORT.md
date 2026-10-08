@@ -60,19 +60,21 @@ RoutePilot enforces a zero-tolerance policy against constraint breaches via the 
 
 | Constraint | Mathematical / Logical Expression | Audit Result | Status |
 |:---|:---|:---:|:---:|
-| **1. Global Visit Uniqueness** | $\forall c \in C, \sum_{e \in E} \mathbb{I}(c \in R_e) \le 1$ | 0 duplicates | **PASSED** |
-| **2. Max Executive Visits** | $\forall e \in E, \|S_e\| \le \text{max\_visits}_e$ (15 stops max) | $\max = 14 \le 15$ | **PASSED** |
-| **3. Depot Start Origin** | $\text{StartCoords}(R_e) = (\text{home\_lat}_e, \text{home\_lon}_e)$ | 100% Match | **PASSED** |
-| **4. Depot Return Terminus** | $\text{EndCoords}(R_e) = (\text{home\_lat}_e, \text{home\_lon}_e)$ | 100% Match | **PASSED** |
-| **5. Max Executive Range** | $\text{Distance}(R_e) \le \text{max\_km}_e$ (80.0 km cap) | $\max = 79.8\text{ km} \le 80.0$ | **PASSED** |
-| **6. Window Arrival Deadline** | $\text{ArrivalTime}(s) \le \text{WindowEnd}(s)$ | 0 late arrivals | **PASSED** |
-| **7. Early Waiting Accounting** | $\text{ServiceStart}(s) = \max(\text{ArrivalTime}(s), \text{WindowStart}(s))$ | Accrues to shift | **PASSED** |
-| **8. Service In-Window Completion** | $\text{ServiceStart}(s) + \text{ServiceMin}(s) \le \text{WindowEnd}(s)$ | 0 overflows | **PASSED** |
-| **9. Shift Return Deadline** | $\text{ReturnTime}(R_e) \le \text{ShiftEnd}(e)$ | 0 overtime breaches | **PASSED** |
-| **10. Mandatory PTP Scheduling** | $\forall c \in C \text{ feasible where } \text{ptp}=1 \implies c \in \bigcup R_e$ | 49/49 Scheduled (100%)| **PASSED** |
-| **11. Explainable Rejection** | $\forall u \in \text{Unscheduled}, \exists \text{Reason}(u)$ | 126 Diagnosed | **PASSED** |
-| **12. Intra-Route Uniqueness** | $\forall e \in E, \text{Unique}(S_e) = \|S_e\|$ | 0 internal repeats | **PASSED** |
-| **13. Continuous Minute Flow** | $T_{\text{dep}}(s) = T_{\text{arr}}(s) + T_{\text{wait}}(s) + T_{\text{serv}}(s)$ | 100% Continuous | **PASSED** |
+| Constraint | Mathematical / Logical Expression | Audit Result | Status |
+|:---|:---|:---:|:---:|
+| **1. Global Visit Uniqueness** | `∀ c ∈ C, Σ I(c ∈ R_e) ≤ 1` across all executives | 0 duplicates | **PASSED** |
+| **2. Max Executive Visits** | `∀ e ∈ E, |S_e| ≤ max_visits` (15 stops max) | max = 14 ≤ 15 | **PASSED** |
+| **3. Depot Start Origin** | `StartCoords(R_e) == (home_lat, home_lon)` | 100% Match | **PASSED** |
+| **4. Depot Return Terminus** | `EndCoords(R_e) == (home_lat, home_lon)` | 100% Match | **PASSED** |
+| **5. Max Executive Range** | `Distance(R_e) ≤ max_km` (80.0 km cap) | max = 79.8 km ≤ 80.0 | **PASSED** |
+| **6. Window Arrival Deadline** | `ArrivalTime(s) ≤ WindowEnd(s)` | 0 late arrivals | **PASSED** |
+| **7. Early Waiting Accounting** | `ServiceStart(s) = max(ArrivalTime(s), WindowStart(s))` | Accrues to shift | **PASSED** |
+| **8. Service In-Window Completion** | `ServiceStart(s) + ServiceMin(s) ≤ WindowEnd(s)` | 0 overflows | **PASSED** |
+| **9. Shift Return Deadline** | `ReturnTime(R_e) ≤ ShiftEnd(e)` | 0 overtime breaches | **PASSED** |
+| **10. Mandatory PTP Scheduling** | `∀ c ∈ feasible where ptp_today == 1 ⟹ scheduled` | 49/49 Scheduled (100%)| **PASSED** |
+| **11. Explainable Rejection** | `∀ u ∈ Unscheduled, ∃ Reason(u)` | 126 Diagnosed | **PASSED** |
+| **12. Intra-Route Uniqueness** | `∀ e ∈ E, Unique(S_e) == |S_e|` | 0 internal repeats | **PASSED** |
+| **13. Continuous Minute Flow** | `T_dep(s) = T_arr(s) + T_wait(s) + T_serv(s)` | 100% Continuous | **PASSED** |
 
 ---
 

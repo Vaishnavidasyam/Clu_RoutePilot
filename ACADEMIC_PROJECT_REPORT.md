@@ -397,7 +397,7 @@ The ingestion pipeline executes multi-stage validation:
 2. **Coordinate Sanity**: Validates latitude and longitude ranges;
 3. **Temporal Ordering**: Confirms that `window_start` < `window_end` and `shift_start` < `shift_end`;
 4. **Feasibility Buffer**: Verifies that the customer time window is sufficiently wide to accommodate the visit duration:
-   $$\text{Duration}(\text{Window}) = \text{window\_end} - \text{window\_start} \ge \text{service\_min}$$
+   $$\text{Duration}(\text{Window}) = \text{WindowEnd} - \text{WindowStart} \ge \text{ServiceMin}$$
 5. **Non-Destructive Reporting**: Format warnings (such as missing area labels) are automatically populated with fallback locality tags without discarding customer rows.
 
 ### 6.3 Mathematical Formulation of m-VRPTW-P
@@ -433,14 +433,14 @@ Every generated itinerary must satisfy all 13 physical constraints:
 | # | Constraint Name | Formulation | Operational Rationale |
 |:-:|:---|:---|:---|
 | **1** | **Global Visit Uniqueness** | $\sum_{k \in E} \sum_{j} x_{ijk} \le 1, \forall i \in C$ | No customer visited twice across fleet |
-| **2** | **Executive Visit Capacity** | $\sum_{i \in C} y_{ik} \le \text{max\_visits}_k$ | Prevents representative over-allocation |
+| **2** | **Executive Visit Capacity** | $\sum_{i \in C} y_{ik} \le \text{MaxVisits}_k$ | Prevents representative over-allocation |
 | **3** | **Depot Departure Origin** | $\sum_{j} x_{0_k j k} = 1, \forall k \in E$ | Route must initiate at executive home |
 | **4** | **Depot Return Terminus** | $\sum_{i} x_{i 0'_k k} = 1, \forall k \in E$ | Route must terminate at executive home |
-| **5** | **Executive Range Cap** | $\sum_{(i, j)} D_{ij} x_{ijk} \le \text{max\_km}_k$ | Enforces fuel and battery limits (80 km) |
-| **6** | **Window Arrival Deadline** | $t_{ik} \le \text{window\_end}_i$ | Representative must arrive before close |
-| **7** | **Early Waiting Accounting**| $t_{\text{start}, ik} = \max(t_{ik}, \text{window\_start}_i)$ | Representative waits if arriving early |
-| **8** | **Service Completion** | $t_{\text{start}, ik} + \text{service\_min}_i \le \text{window\_end}_i$ | Visit must finish before customer leaves |
-| **9** | **Shift Return Deadline** | $t_{0'_k k} \le \text{shift\_end}_k$ | Representative must return before shift ends |
+| **5** | **Executive Range Cap** | $\sum_{(i, j)} D_{ij} x_{ijk} \le \text{MaxKm}_k$ | Enforces fuel and battery limits (80 km) |
+| **6** | **Window Arrival Deadline** | $t_{ik} \le \text{WindowEnd}_i$ | Representative must arrive before close |
+| **7** | **Early Waiting Accounting**| $t_{\text{start}, ik} = \max(t_{ik}, \text{WindowStart}_i)$ | Representative waits if arriving early |
+| **8** | **Service Completion** | $t_{\text{start}, ik} + \text{ServiceMin}_i \le \text{WindowEnd}_i$ | Visit must finish before customer leaves |
+| **9** | **Shift Return Deadline** | $t_{0'_k k} \le \text{ShiftEnd}_k$ | Representative must return before shift ends |
 | **10** | **Mandatory PTP Protection**| $i \in C_{\text{PTP}} \implies y_i = 1$ (if feasible) | Strict priority for promise-to-pay accounts |
 | **11** | **Deterministic Exclusion**| $y_i = 0 \implies \exists \text{Reason}(i)$ | Diagnoses every skipped account |
 | **12** | **Intra-Route Uniqueness**| Stop sequence contains zero duplicates | Eliminates redundant loops |
@@ -608,7 +608,7 @@ python -m pytest backend/tests/ -v
 | **TC-06: Dataset Switch**| Import 6 execs / 200 cust $\to$ switch to 3 execs / 25 cust | Active plan reflects exactly 3 execs / 25 cust | Old dataset replaced completely; 3 routes generated | **PASSED** |
 | **TC-07: PTP Protection**| Roster with 100% PTP accounts (`ptp_today = 1`) | Optimizer schedules all feasible PTP accounts | All feasible PTP accounts covered with priority | **PASSED** |
 | **TC-08: Tight Windows** | Customers with conflicting 30-min windows | Feasible stops scheduled; infeasible logged with diagnostics | Feasible stops scheduled; tight windows flagged in exceptions | **PASSED** |
-| **TC-09: Capacity Limits**| Low capacity ($\text{max\_visits} = 3$) | Route stops strictly capped at 3 | No route exceeded 3 stops; overflow logged | **PASSED** |
+| **TC-09: Capacity Limits**| Low capacity (`max_visits` = 3) | Route stops strictly capped at 3 | No route exceeded 3 stops; overflow logged | **PASSED** |
 | **TC-10: Multi-Dataset**| Sequential uploads of varying sizes | System operates dynamically without code changes | All datasets processed dynamically | **PASSED** |
 
 ### 9.3 Physical Constraint Enforcement Test Cases
@@ -665,7 +665,7 @@ The primary performance benchmark was conducted on the active operational datase
 
 ### 10.4 Computational Complexity & Runtime Scalability
 * **Greedy Insertion**: Evaluates $|C_{\text{remaining}}| \times \sum |S_e|$ candidate insertions, operating in $O(|C|^2 \cdot |E|)$.
-* **2-Opt Local Search**: Evaluates sequence inversions per route in $O(|S_e|^2)$. Since each route is bounded by $\text{max\_visits} \le 15$, the 2-Opt phase executes in $O(|E| \cdot 15^2) \approx O(1)$ with respect to total customer count.
+* **2-Opt Local Search**: Evaluates sequence inversions per route in $O(|S_e|^2)$. Since each route is bounded by $\text{MaxVisits} \le 15$, the 2-Opt phase executes in $O(|E| \cdot 15^2) \approx O(1)$ with respect to total customer count.
 * **Empirical Runtime**: The complete optimization pipeline completed in **5,438 ms (5.44 seconds)** on the 200-customer / 6-executive benchmark, demonstrating high responsiveness suitable for real-time operations.
 
 ---

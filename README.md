@@ -1,19 +1,21 @@
+<div align="center">
+
+<img src="frontend/public/app-icon.png" width="100" height="100" alt="RoutePilot Logo" />
+
 # RoutePilot — AI-Powered Daily Field Visit Planning Platform
-> **Enterprise Multi-Vehicle Route Optimization (m-VRPTW) & Real-Time Field Execution System**
+**Enterprise Multi-Vehicle Route Optimization (m-VRPTW) & Real-Time Field Execution System**
 
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.109%2B-009688.svg)](https://fastapi.tiangolo.com)
-[![React 18](https://img.shields.io/badge/React-18.3.1-61dafb.svg)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue.svg)](https://www.typescriptlang.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8.svg)](https://tailwindcss.com)
-[![Vite](https://img.shields.io/badge/Vite-6.4-purple.svg)](https://vitejs.dev)
-[![Tests](https://img.shields.io/badge/Pytest-22%2F22_Passed-emerald.svg)]()
-[![Location](https://img.shields.io/badge/Operations-Hyderabad%2C_India-orange.svg)]()
-[![Timezone](https://img.shields.io/badge/Timezone-Asia%2FKolkata_(IST)-123A55.svg)]()
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109%2B-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React 18](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38BDF8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-6.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![Pytest](https://img.shields.io/badge/Pytest-22%2F22_Passed-10B981?logo=pytest&logoColor=white)](https://pytest.org)
+[![Location](https://img.shields.io/badge/Operations-Hyderabad%2C_India-EA580C?logo=googlemaps&logoColor=white)]()
+[![Timezone](https://img.shields.io/badge/Timezone-Asia%2FKolkata_(IST)-123A55)]()
 
-<p align="center">
-  <img src="frontend/public/app-icon.png" width="128" height="128" alt="RoutePilot Official App Icon" style="border-radius: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
-</p>
+</div>
 
 ---
 
@@ -35,7 +37,7 @@ It formulates and solves the **Multi-Vehicle Routing Problem with Time Windows a
 
 * **Smart Greedy + 2-Opt Optimization Engine**:
   * **100% PTP Protection**: All Promise-to-Pay delinquent accounts are prioritized in Pass 1, ensuring zero SLA breaches.
-  * **$\lambda$-Balanced Scoring**: Evaluates candidate visits using marginal gain $\Delta Z = \text{Priority}(c) - \lambda \times \Delta\text{km}$.
+  * **λ-Balanced Scoring**: Evaluates candidate visits using marginal gain `ΔZ = Priority(c) - λ × Δkm`.
   * **2-Opt Edge-Exchange Search**: Iterative sequence inversion that reduces road travel distance while strictly verifying all 13 physical constraints.
   * **Verified Performance**: **74 visits** scheduled across 6 executives, **447.4 km** total fleet transit, **49/49 PTP accounts protected**, and **0 constraint violations**.
 
@@ -48,7 +50,7 @@ It formulates and solves the **Multi-Vehicle Routing Problem with Time Windows a
   * Field executives have an integrated profile dropdown menu in the header (identical in elegance to Manager/Admin).
   * Features initial avatar badge, executive name, corporate email, role pill, 1-click navigation to profile, and clean session sign-out redirecting to `/login`.
 
-* **Real-Time Field $\leftrightarrow$ Operations Manager Replication**:
+* **Real-Time Field ↔ Operations Manager Replication**:
   * Mobile visit lifecycle events (`VISIT_STARTED`, `VISIT_COMPLETED`, `VISIT_FAILED`) update backend audit logs and stop states.
   * Operations Manager route cards and detailed timelines instantly reflect live visit progress (`✓ Completed`, `● In Progress`, `✕ Unsuccessful`) along with collected UPI payments.
 
@@ -103,18 +105,18 @@ Every candidate stop sequence passes through the Central Route Validator (`backe
 | # | Constraint Name | Validation Rule | Impact of Violation |
 |:-:|:---|:---|:---|
 | **1** | **Global Unique Visit** | Each customer account ID visited at most once across the fleet | Customer visited by multiple executives (Blocked) |
-| **2** | **Executive Visit Capacity** | Stop count per route $\le \text{max\_visits}$ (e.g. 15 stops) | Executive fatigue / shift overflow (Blocked) |
-| **3** | **Depot Departure Origin** | Route start coordinates $== (\text{home\_lat}, \text{home\_lon})$ | Invalid journey start (Blocked) |
-| **4** | **Depot Return Terminus** | Route finish coordinates $== (\text{home\_lat}, \text{home\_lon})$ | Stranded executive / incomplete shift (Blocked) |
-| **5** | **Executive Range Cap** | Total cumulative route km $\le \text{max\_km}$ (e.g. 80.0 km) | Fuel exhaustion / two-wheeler range exceed (Blocked) |
-| **6** | **Time Window Arrival** | Executive arrival $\le \text{customer.window\_end}$ | Customer unavailable / missed window (Blocked) |
+| **2** | **Executive Visit Capacity** | Stop count per route ≤ `max_visits` (e.g., 15 stops) | Executive fatigue / shift overflow (Blocked) |
+| **3** | **Depot Departure Origin** | Route start coordinates == (`home_lat`, `home_lon`) | Invalid journey start (Blocked) |
+| **4** | **Depot Return Terminus** | Route finish coordinates == (`home_lat`, `home_lon`) | Stranded executive / incomplete shift (Blocked) |
+| **5** | **Executive Range Cap** | Total cumulative route km ≤ `max_km` (e.g., 80.0 km) | Fuel exhaustion / two-wheeler range exceed (Blocked) |
+| **6** | **Time Window Arrival** | Executive arrival ≤ `customer.window_end` | Customer unavailable / missed window (Blocked) |
 | **7** | **Early Arrival Waiting** | Arrival before `window_start` waits on-site; waiting time counted in shift | Prevents early knocking; honors borrower convenience |
-| **8** | **Service Completion** | $\text{service\_start} + \text{service\_min} \le \text{customer.window\_end}$ | Incomplete collection conversation (Blocked) |
-| **9** | **Shift Return Deadline** | Final return time at depot $\le \text{executive.shift\_end}$ | Labor overtime breach (Blocked) |
+| **8** | **Service Completion** | `service_start` + `service_min` ≤ `customer.window_end` | Incomplete collection conversation (Blocked) |
+| **9** | **Shift Return Deadline** | Final return time at depot ≤ `executive.shift_end` | Labor overtime breach (Blocked) |
 | **10** | **PTP Protection SLA** | All `ptp_today == 1` accounts prioritized for scheduling | High-risk delinquent loss (Strict Priority 1) |
 | **11** | **Deterministic Exclusion** | Every unscheduled account receives an explainable diagnostic reason | Clear exception visibility for manager replanning |
 | **12** | **Intra-Route Uniqueness** | Zero duplicate customer IDs inside an executive itinerary | Redundant double-visit on same day (Blocked) |
-| **13** | **Continuous Clock Sim** | All calculations conducted in integer minutes $[0, 1440]$ | Eliminates AM/PM string parsing discrepancies |
+| **13** | **Continuous Clock Sim** | All calculations conducted in integer minutes [0, 1440] | Eliminates AM/PM string parsing discrepancies |
 
 ---
 
@@ -132,7 +134,7 @@ Every candidate stop sequence passes through the Central Route Validator (`backe
 
 ### 2. Field Executive Cockpit (`/executive/*`)
 * **Real-Time Home Tab (`/executive/home`)**: Next Stop card, countdown timers, customer phone trigger, and 1-tap Google Maps turn-by-turn navigation.
-* **Guided Visit State Machine**: Guided flow: `En Route` $\to$ `Arrived` $\to$ `In Visit` $\to$ `Outcome Modal` $\to$ `Completed`.
+* **Guided Visit State Machine**: Guided flow: `En Route` → `Arrived` → `In Visit` → `Outcome Modal` → `Completed`.
 * **Collection Outcome Modal**: Record cash/UPI collection amount, confirm Promise-to-Pay extension, or document door locked / dispute reasons.
 * **Sequential Itinerary (`/executive/route`)**: Full timeline of today's stops with PTP badges, expected arrival times, and waiting intervals.
 * **Customer Roster (`/executive/customers`)**: Search and filter assigned customers by PTP status, area, or pending/completed state.
@@ -141,7 +143,7 @@ Every candidate stop sequence passes through the Central Route Validator (`backe
 ### 3. System Administrator Console (`/manager/admin`)
 * **User Management**: Manage corporate accounts, roles (`ADMIN`, `OPERATIONS_MANAGER`, `EXECUTIVE`), and account active toggles.
 * **Audit Trail**: Full system audit log recording logins, CSV uploads, plan runs, visit outcomes, and exports.
-* **System Settings**: Tune optimization hyperparameters ($\lambda$, average travel speed, service buffers).
+* **System Settings**: Tune optimization hyperparameters (trade-off weight λ, average travel speed, service buffers).
 
 ---
 
@@ -151,7 +153,7 @@ Every candidate stop sequence passes through the Central Route Validator (`backe
 |:---|:---|:---|
 | **Backend Framework** | FastAPI | Python 3.10+, Asynchronous REST endpoints |
 | **Database & ORM** | SQLAlchemy 2.0 | SQLite embedded database with full relational constraints |
-| **Optimization Core** | Python Custom Engine | Smart Greedy + 2-Opt Local Search ($O(N^2)$ sequence tuning) |
+| **Optimization Core** | Python Custom Engine | Smart Greedy + 2-Opt Local Search (O(N²) sequence tuning) |
 | **Geodesic Math** | Haversine + Circuitry | Road multiplier factor 1.3, average urban speed 25 km/h |
 | **Authentication** | PyJWT & Passlib | Scoped JWT Bearer tokens with Bcrypt salted hashing |
 | **Frontend Framework** | React 18 | TypeScript, Functional components & Custom hooks |
@@ -277,7 +279,7 @@ python -m pytest backend/tests/ -v
 * `test_api_login`: Verifies JWT issuance and user role validation.
 * `test_api_today_data`: Verifies snapshot loading and customer counts.
 * `test_api_validation`: Verifies zero blocking errors on active datasets.
-* `test_haversine_and_road_distance`: Verifies $\text{Haversine} \times 1.3$ road factor.
+* `test_haversine_and_road_distance`: Verifies Haversine × 1.3 road factor.
 * `test_travel_time`: Verifies 25 km/h transit speed conversion.
 * `test_time_conversions`: Verifies integer minute conversions.
 * `test_challenge_worked_example_regression`: Verifies exact worked regression scenario.
